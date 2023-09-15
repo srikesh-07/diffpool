@@ -123,7 +123,7 @@ def arg_parse():
         batch_size=20,
         epoch=4000,
         train_ratio=0.7,
-        test_ratio=0.1,
+        test_ratio=0.2,
         n_worker=1,
         gc_per_block=3,
         dropout=0.0,
@@ -180,13 +180,13 @@ def graph_classify_task(prog_args, seed):
 
     if prog_args.dataset == "PROTEINS":
         K = [0, 371, 742, 1113]
-    elif prog_args.dataset == "PTC":
+    elif prog_args.dataset == "PTC_MR":
         K = [0, 115, 230, 344]
-    elif prog_args.dataset == "IMDBBINARY":
+    elif prog_args.dataset == "IMDB-BINARY":
         K = [0, 333, 666, 1000]
     elif prog_args.dataset == "DD":
         K = [0, 393, 785, 1178]
-    elif prog_args.dataset == "FRANK":
+    elif prog_args.dataset == "FRANKENSTEIN":
         K = [0, 1445, 2890, 4337]
 
     ranges = dict()
@@ -229,7 +229,7 @@ def graph_classify_task(prog_args, seed):
     print("number of graphs is", len(dataset))
     # assert len(dataset) % prog_args.batch_size == 0, "training set not divisible by batch size"
 
-    hidden_dim = 64  # used to be 64
+    hidden_dim = 32  # used to be 64
     embedding_dim = 64
 
     # calculate assignment dimension: pool_ratio * largest graph's maximum
