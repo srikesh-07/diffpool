@@ -459,8 +459,8 @@ def main():
         valid_record[seed] = logger["val_acc"]
         test_record[seed] = test_result["acc"]
         head_record[seed] = test_result["head_acc"]
-        medium_record[seed] = test_record["med_acc"]
-        tail_record[seed] = test_record["tail_acc"]
+        medium_record[seed] = test_result["med_acc"]
+        tail_record[seed] = test_result["tail_acc"]
 
     with open("metrics.txt", "a") as txt_file:
         txt_file.write(f"Dataset: {prog_args.dataset} \n"
