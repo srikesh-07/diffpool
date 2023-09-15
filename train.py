@@ -158,7 +158,7 @@ def prepare_data(dataset, prog_args, train=False, pre_process=None):
     )
 
 
-def graph_classify_task(prog_args):
+def graph_classify_task(prog_args, seed):
     """
     perform graph classification task
     """
@@ -170,9 +170,9 @@ def graph_classify_task(prog_args):
 
     nodes = torch.zeros(len(dataset))
     for i in range(len(dataset)):
-        nodes[i] = dataset[i].num_nodes
+        nodes[i] = dataset[i][0].num_nodes()
 
-    _, ind = torch.sort(nodes, descending=True)
+    values, _ = torch.sort(nodes, descending=True)
 
     head = 0
     med = 0
@@ -187,17 +187,27 @@ def graph_classify_task(prog_args):
     elif prog_args.dataset == "DD":
         K = [0, 393, 785, 1178]
     elif prog_args.dataset == "FRANK":
-        K =[0, 1445, 2890, 4337]
+        K = [0, 1445, 2890, 4337]
 
-    for i in ind[K[0]:K[1]]:
-        head += 1
-        setattr(dataset[i], 'graph_group', 2)
-    for i in ind[K[1]:K[2]]:
-        med += 1
-        setattr(dataset[i], 'graph_group', 1)
-    for i in ind[K[2]:K[3]]:
-        tail += 1
-        setattr(dataset[i], 'graph_group', 0)
+    ranges = dict()
+
+    ranges["head"] = list(set(values[K[0]:K[1]]))
+    ranges["med"] = list(set(values[K[1]:K[2]]))
+    ranges["tail"] = list(set(values[K[2]:K[3]]))
+
+    # a = list()
+    # for i in ind[K[0]:K[1]]:
+    #     a.append(dataset[i][0].num_nodes)
+    # ranges["head"] = range(a[-1], a[0])
+    # assert a[-1] == min(a) and a[0] == max(a)
+    #
+    # for i in ind[K[1]:K[2]]:
+    #     a = dataset[i][0].num_nodes
+    # ranges["head"] = range(a[-1], a[0])
+    # assert a[-1] == min(a) and a[0] == max(a)
+    # for i in ind[K[2]:K[3]]:
+    #     tail += 1
+    #     setattr(dataset[i][0], 'graph_group', 0)
 
     dataset_train, dataset_val, dataset_test = torch.utils.data.random_split(
         dataset, (train_size, val_size, test_size)
@@ -253,7 +263,7 @@ def graph_classify_task(prog_args):
         model.load_state_dict(
             torch.load(
                 prog_args.save_dir
-                + "/"
+                + "/" + str(seed) + "/"
                 + prog_args.dataset
                 + "/model.iter-"
                 + str(prog_args.load_epoch)
@@ -266,17 +276,17 @@ def graph_classify_task(prog_args):
         model = model.cuda()
 
     logger = train(
-        train_dataloader, model, prog_args, val_dataset=val_dataloader
+        train_dataloader, model, prog_args, val_dataset=val_dataloader, ranges=ranges, seed=seed
     )
-    result = evaluate(test_dataloader, model, prog_args, logger)
+    result = evaluate(test_dataloader, model, prog_args, logger, seed=seed, ranges=ranges)
     print("Test  acc {:.2f}, head_acc {:.2f}, med_acc {:.2f}, tail_acc {:.2f}".format(result["acc"],
-                                                                                            result["head_acc"],
-                                                                                            result["med_acc"],
-                                                                                            result["tail_acc"]))
+                                                                                      result["head_acc"],
+                                                                                      result["med_acc"],
+                                                                                      result["tail_acc"]))
     return logger, result
 
 
-def train(dataset, model, prog_args, same_feat=True, val_dataset=None, seed=None):
+def train(dataset, model, prog_args, same_feat=True, val_dataset=None, seed=None, ranges=None):
     """
     training function
     """
@@ -334,21 +344,21 @@ def train(dataset, model, prog_args, same_feat=True, val_dataset=None, seed=None
         )
         global_train_time_per_epoch.append(elapsed_time)
         if val_dataset is not None:
-            result = evaluate(val_dataset, model, prog_args)
+            result = evaluate(val_dataset, model, prog_args, ranges=ranges)
             print("validation  acc {:.2f}, head_acc {:.2f}, med_acc {:.2f}, tail_acc {:.2f}".format(result["acc"],
                                                                                                     result["head_acc"],
                                                                                                     result["med_acc"],
                                                                                                     result["tail_acc"]))
             if (
-                result["acc"] >= early_stopping_logger["val_acc"]
-                and result["acc"] <= train_accu
+                    result["acc"] >= early_stopping_logger["val_acc"]
+                    and result["acc"] <= train_accu
             ):
                 early_stopping_logger.update(best_epoch=epoch, val_acc=result["acc"])
                 if prog_args.save_dir is not None:
                     torch.save(
                         model.state_dict(),
                         prog_args.save_dir
-                        + "/"
+                        + "/" + str(seed) + "/"
                         + prog_args.dataset
                         + "/model.iter-"
                         + str(early_stopping_logger["best_epoch"]),
@@ -363,7 +373,7 @@ def train(dataset, model, prog_args, same_feat=True, val_dataset=None, seed=None
     return early_stopping_logger
 
 
-def evaluate(dataloader, model, prog_args, logger=None):
+def evaluate(dataloader, model, prog_args, logger=None, seed=None, ranges=None):
     """
     evaluate function
     """
@@ -371,15 +381,15 @@ def evaluate(dataloader, model, prog_args, logger=None):
         model.load_state_dict(
             torch.load(
                 prog_args.save_dir
-                + "/"
+                + "/" + str(seed) + "/"
                 + prog_args.dataset
                 + "/model.iter-"
                 + str(logger["best_epoch"])
             )
         )
     model.eval()
-    graph_preds = {0: [], 1: [], 2:[]}
-    graph_correct = {0: [], 1:[], 2:[]}
+    graph_preds = {0: [], 1: [], 2: []}
+    graph_correct = {0: [], 1: [], 2: []}
 
     correct_label = 0
     with torch.no_grad():
@@ -387,15 +397,25 @@ def evaluate(dataloader, model, prog_args, logger=None):
             for key, value in batch_graph.ndata.items():
                 batch_graph.ndata[key] = value.float()
             graph_labels = graph_labels.long()
-            for graph, label in zip(batch_graph, graph_labels):
-                graph_correct[graph.graph_group].append(label)
+            # for graph, label in zip(batch_graph, graph_labels):
+            #     graph_correct[graph.graph_group].append(label)
             if torch.cuda.is_available():
                 batch_graph = batch_graph.to(torch.cuda.current_device())
                 graph_labels = graph_labels.cuda()
             ypred = model(batch_graph)
             indi = torch.argmax(ypred, dim=1)
-            for index, graph in enumerate(batch_graph):
-                graph_preds[graph.graph_group].append(indi[index].cpu().item())
+            batch_nodes = batch_graph.batch_num_nodes().cpu().tolist()
+            for idx in range(len(batch_nodes)):
+                if batch_nodes[idx] in ranges["head"]:
+                    graph_group = 2
+                elif batch_nodes[idx] in ranges["med"]:
+                    graph_group = 1
+                elif batch_nodes[idx] in ranges["tail"]:
+                    graph_group = 0
+                else:
+                    assert False
+                graph_preds[graph_group].append(indi[idx].cpu().item())
+                graph_correct[graph_group].append(graph_labels[idx].cpu().item())
             correct = torch.sum(indi == graph_labels)
             correct_label += correct.item()
     result = correct_label / (len(dataloader) * prog_args.batch_size)
@@ -403,7 +423,6 @@ def evaluate(dataloader, model, prog_args, logger=None):
                 head_acc=accuracy_score(graph_correct[2], graph_preds[2]),
                 med_acc=accuracy_score(graph_correct[1], graph_preds[1]),
                 tail_acc=accuracy_score(graph_correct[0], graph_preds[0]))
-
 
 
 def main():
@@ -425,7 +444,7 @@ def main():
         random.seed(seed)
         np.random.seed(seed)
         torch.manual_seed(seed)
-        logger, test_result = graph_classify_task(prog_args)
+        logger, test_result = graph_classify_task(prog_args, seed)
 
         print(
             "Train time per epoch: {:.4f}".format(
