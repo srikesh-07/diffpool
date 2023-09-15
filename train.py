@@ -440,6 +440,7 @@ def main():
     head_record = torch.zeros(len(SEEDS))
 
     for seed in SEEDS:
+        print(f"Trianing with SEED - {seed}")
         dgl.seed(seed)
         random.seed(seed)
         np.random.seed(seed)
