@@ -6,7 +6,7 @@ class EntropyLoss(nn.Module):
     # Return Scalar
     def forward(self, adj, anext, s_l):
         entropy = (
-            (torch.distributions.Categorical(probs=s_l).entropy())
+            (torch.distributions.Categorical(probs=s_l, validate_args=False).entropy())
             .sum(-1)
             .mean(-1)
         )

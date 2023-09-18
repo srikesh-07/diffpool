@@ -19,6 +19,10 @@ class BatchedGraphSAGE(nn.Module):
 
     def forward(self, x, adj):
         num_node_per_graph = adj.size(1)
+        layer_norm = False
+        if num_node_per_graph == 0:
+            self.use_bn = False
+            layer_norm = True
         if self.use_bn and not hasattr(self, "bn"):
             self.bn = nn.BatchNorm1d(num_node_per_graph).to(adj.device)
 
@@ -32,8 +36,12 @@ class BatchedGraphSAGE(nn.Module):
         h_k = self.W(h_k_N)
         h_k = F.normalize(h_k, dim=2, p=2)
         h_k = F.relu(h_k)
+        #print(h_k.shape)
         if self.use_bn:
             h_k = self.bn(h_k)
+        if layer_norm:
+            self.layer_norm = torch.nn.LayerNorm(h_k.shape).to("cuda")
+            h_k = self.layer_norm(h_k)
         return h_k
 
     def __repr__(self):

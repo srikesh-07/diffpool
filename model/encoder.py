@@ -51,7 +51,7 @@ class DiffPool(nn.Module):
         # list of list of GNN modules, each list after one diffpool operation
         self.gc_after_pool = nn.ModuleList()
         self.assign_dim = assign_dim
-        self.bn = True
+        self.bn = False
         self.num_aggs = 1
 
         # constructing layers

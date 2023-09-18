@@ -9,6 +9,7 @@ import dgl.function as fn
 import networkx as nx
 import numpy as np
 import torch
+torch.multiprocessing.set_start_method("spawn")
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.data
@@ -154,7 +155,7 @@ def prepare_data(dataset, prog_args, train=False, pre_process=None):
         dataset,
         batch_size=prog_args.batch_size,
         shuffle=shuffle,
-        num_workers=prog_args.n_worker,
+        num_workers=0,
     )
 
 
@@ -363,6 +364,18 @@ def train(dataset, model, prog_args, same_feat=True, val_dataset=None, seed=None
                         + "/model.iter-"
                         + str(early_stopping_logger["best_epoch"]),
                     )
+            
+            if epoch == 0:
+                early_stopping_logger.update(best_epoch=epoch, val_acc=result["acc"])
+                if prog_args.save_dir is not None:
+                    torch.save(
+                        model.state_dict(),
+                        prog_args.save_dir
+                        + "/" + str(seed) + "/"
+                        + prog_args.dataset
+                        + "/model.iter-"
+                        + str(early_stopping_logger["best_epoch"]),)
+
             print(
                 "best epoch is EPOCH {}, val_acc is {:.2f}%".format(
                     early_stopping_logger["best_epoch"],

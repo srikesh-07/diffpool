@@ -1,0 +1,43 @@
+/local/scratch/v_srikeshram_b/miniconda3/envs/dgl/lib/python3.9/site-packages/torch/nn/init.py:405: UserWarning: Initializing zero-element tensors is a no-op
+  warnings.warn("Initializing zero-element tensors is a no-op")
+Trianing with SEED - 0
+++++++++++STATISTICS ABOUT THE DATASET
+dataset feature dimension is 18
+dataset label dimension is 3
+the max num node is 64
+number of graphs is 344
+++++++++++MODEL STATISTICS++++++++
+model hidden dim is 32
+model embedding dim for graph instance embedding 64
+initial batched pool graph dim is 6
+model init finished
+MODEL::::::: diffpool
+
+EPOCH ###### 0 ######
+Traceback (most recent call last):
+  File "/local/scratch/v_srikeshram_b/diffpool/train.py", line 485, in <module>
+    main()
+  File "/local/scratch/v_srikeshram_b/diffpool/train.py", line 449, in main
+    logger, test_result = graph_classify_task(prog_args, seed)
+  File "/local/scratch/v_srikeshram_b/diffpool/train.py", line 279, in graph_classify_task
+    logger = train(
+  File "/local/scratch/v_srikeshram_b/diffpool/train.py", line 322, in train
+    ypred = model(batch_graph)
+  File "/local/scratch/v_srikeshram_b/miniconda3/envs/dgl/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/local/scratch/v_srikeshram_b/diffpool/model/encoder.py", line 215, in forward
+    h, adj = diffpool_layer(h, adj)
+  File "/local/scratch/v_srikeshram_b/miniconda3/envs/dgl/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/local/scratch/v_srikeshram_b/diffpool/model/tensorized_layers/diffpool.py", line 34, in forward
+    self.loss_log[loss_name] = loss_layer(adj, anext, s_l)
+  File "/local/scratch/v_srikeshram_b/miniconda3/envs/dgl/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/local/scratch/v_srikeshram_b/diffpool/model/loss.py", line 9, in forward
+    (torch.distributions.Categorical(probs=s_l).entropy())
+  File "/local/scratch/v_srikeshram_b/miniconda3/envs/dgl/lib/python3.9/site-packages/torch/distributions/categorical.py", line 66, in __init__
+    super(Categorical, self).__init__(batch_shape, validate_args=validate_args)
+  File "/local/scratch/v_srikeshram_b/miniconda3/envs/dgl/lib/python3.9/site-packages/torch/distributions/distribution.py", line 56, in __init__
+    raise ValueError(
+ValueError: Expected parameter probs (Tensor of shape (20, 6, 0)) of distribution Categorical(probs: torch.Size([20, 6, 0])) to satisfy the constraint Simplex(), but found invalid values:
+tensor([], device='cuda:0', size=(20, 6, 0), grad_fn=<DivBackward0>)
