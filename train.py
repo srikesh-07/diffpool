@@ -3,6 +3,7 @@ import os
 import random
 import time
 
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 import dgl
 import dgl.function as fn
 

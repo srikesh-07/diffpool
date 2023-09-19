@@ -1,26 +1,74 @@
+Dataset: PTC_MR 
+Valid Mean: 0.45 
+Std Valid Mean: 0.0729 
+Test Mean: 0.4925 
+Std Test Mean: 0.019 
+Head Mean: 0.6068 
+Std Head Mean: 0.158 
+Medium Mean: 0.6314 
+Std Medium Mean: 0.1153 
+Tail Mean: 0.4819 
+Std Tail Mean: 0.077 
+
 Dataset: PROTEINS 
-Valid Mean: 0.735 
-Std Valid Mean: 0.0199 
-Test Mean: 0.6675 
-Std Test Mean: 0.0185 
-Head Mean: 0.8014 
-Std Head Mean: 0.0459 
-Medium Mean: 0.6908 
-Std Medium Mean: 0.0294 
+Valid Mean: 0.7367 
+Std Valid Mean: 0.0209 
+Test Mean: 0.665 
+Std Test Mean: 0.0181 
+Head Mean: 0.7984 
+Std Head Mean: 0.0437 
+Medium Mean: 0.6858 
+Std Medium Mean: 0.0268 
 Tail Mean: 0.6731 
 Std Tail Mean: 0.0338 
 
 Dataset: IMDB-BINARY 
-Valid Mean: 0.566 
-Std Valid Mean: 0.0167 
+Valid Mean: 0.57 
+Std Valid Mean: 0.0141 
 Test Mean: 0.559 
-Std Test Mean: 0.0263 
-Head Mean: 0.509 
-Std Head Mean: 0.0259 
-Medium Mean: 0.558 
-Std Medium Mean: 0.0629 
-Tail Mean: 0.638 
-Std Tail Mean: 0.0892 
+Std Test Mean: 0.0195 
+Head Mean: 0.5386 
+Std Head Mean: 0.0591 
+Medium Mean: 0.5704 
+Std Medium Mean: 0.0596 
+Tail Mean: 0.5689 
+Std Tail Mean: 0.0933 
+
+Dataset: PTC_MR 
+Valid Mean: 0.575 
+Std Valid Mean: 0.025 
+Test Mean: 0.4425 
+Std Test Mean: 0.0818 
+Head Mean: 0.5484 
+Std Head Mean: 0.2085 
+Medium Mean: 0.5842 
+Std Medium Mean: 0.142 
+Tail Mean: 0.4637 
+Std Tail Mean: 0.0736 
+
+Dataset: PROTEINS 
+Valid Mean: 0.735 
+Std Valid Mean: 0.016 
+Test Mean: 0.6667 
+Std Test Mean: 0.0293 
+Head Mean: 0.7867 
+Std Head Mean: 0.0493 
+Medium Mean: 0.6803 
+Std Medium Mean: 0.0231 
+Tail Mean: 0.6956 
+Std Tail Mean: 0.0483 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.578 
+Std Valid Mean: 0.0356 
+Test Mean: 0.56 
+Std Test Mean: 0.0337 
+Head Mean: 0.4999 
+Std Head Mean: 0.0531 
+Medium Mean: 0.6037 
+Std Medium Mean: 0.0606 
+Tail Mean: 0.551 
+Std Tail Mean: 0.1187 
 
 Dataset: FRANKENSTEIN 
 Valid Mean: 0.6673 
@@ -35,16 +83,64 @@ Tail Mean: 0.5986
 Std Tail Mean: 0.0189 
 
 Dataset: PTC_MR 
-Valid Mean: 0.45 
-Std Valid Mean: 0.0729 
-Test Mean: 0.4925 
-Std Test Mean: 0.019 
-Head Mean: 0.6068 
-Std Head Mean: 0.158 
-Medium Mean: 0.6314 
-Std Medium Mean: 0.1153 
-Tail Mean: 0.4819 
-Std Tail Mean: 0.077 
+Valid Mean: 0.57 
+Std Valid Mean: 0.0371 
+Test Mean: 0.4325 
+Std Test Mean: 0.0769 
+Head Mean: 0.5897 
+Std Head Mean: 0.1382 
+Medium Mean: 0.4981 
+Std Medium Mean: 0.1868 
+Tail Mean: 0.4481 
+Std Tail Mean: 0.0714 
+
+Dataset: PROTEINS 
+Valid Mean: 0.7333 
+Std Valid Mean: 0.0195 
+Test Mean: 0.6783 
+Std Test Mean: 0.0311 
+Head Mean: 0.7886 
+Std Head Mean: 0.0519 
+Medium Mean: 0.7033 
+Std Medium Mean: 0.034 
+Tail Mean: 0.7073 
+Std Tail Mean: 0.0623 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.572 
+Std Valid Mean: 0.013 
+Test Mean: 0.571 
+Std Test Mean: 0.0198 
+Head Mean: 0.5086 
+Std Head Mean: 0.0302 
+Medium Mean: 0.5626 
+Std Medium Mean: 0.0468 
+Tail Mean: 0.6568 
+Std Tail Mean: 0.1116 
+
+Dataset: PTC_MR 
+Valid Mean: 0.58 
+Std Valid Mean: 0.0326 
+Test Mean: 0.4525 
+Std Test Mean: 0.0511 
+Head Mean: 0.5988 
+Std Head Mean: 0.1183 
+Medium Mean: 0.6082 
+Std Medium Mean: 0.1193 
+Tail Mean: 0.4043 
+Std Tail Mean: 0.0996 
+
+Dataset: PROTEINS 
+Valid Mean: 0.7233 
+Std Valid Mean: 0.0137 
+Test Mean: 0.6592 
+Std Test Mean: 0.0227 
+Head Mean: 0.7922 
+Std Head Mean: 0.0477 
+Medium Mean: 0.6774 
+Std Medium Mean: 0.0268 
+Tail Mean: 0.6675 
+Std Tail Mean: 0.0436 
 
 Dataset: DD 
 Valid Mean: 0.7617 
@@ -57,4 +153,640 @@ Medium Mean: 0.7324
 Std Medium Mean: 0.053 
 Tail Mean: 0.7568 
 Std Tail Mean: 0.0506 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6677 
+Std Valid Mean: 0.0245 
+Test Mean: 0.6366 
+Std Test Mean: 0.0226 
+Head Mean: 0.6627 
+Std Head Mean: 0.0348 
+Medium Mean: 0.6403 
+Std Medium Mean: 0.0366 
+Tail Mean: 0.6323 
+Std Tail Mean: 0.0156 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.608 
+Std Valid Mean: 0.013 
+Test Mean: 0.6 
+Std Test Mean: 0.0272 
+Head Mean: 0.5464 
+Std Head Mean: 0.0614 
+Medium Mean: 0.6208 
+Std Medium Mean: 0.0821 
+Tail Mean: 0.6281 
+Std Tail Mean: 0.0979 
+
+Dataset: PTC_MR 
+Valid Mean: 0.595 
+Std Valid Mean: 0.0447 
+Test Mean: 0.445 
+Std Test Mean: 0.0721 
+Head Mean: 0.5893 
+Std Head Mean: 0.1578 
+Medium Mean: 0.5298 
+Std Medium Mean: 0.1923 
+Tail Mean: 0.4456 
+Std Tail Mean: 0.1063 
+
+Dataset: PROTEINS 
+Valid Mean: 0.715 
+Std Valid Mean: 0.0181 
+Test Mean: 0.6525 
+Std Test Mean: 0.0307 
+Head Mean: 0.7869 
+Std Head Mean: 0.0526 
+Medium Mean: 0.6617 
+Std Medium Mean: 0.0592 
+Tail Mean: 0.6708 
+Std Tail Mean: 0.0292 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.59 
+Std Valid Mean: 0.01 
+Test Mean: 0.565 
+Std Test Mean: 0.0541 
+Head Mean: 0.4711 
+Std Head Mean: 0.0468 
+Medium Mean: 0.6042 
+Std Medium Mean: 0.1005 
+Tail Mean: 0.6157 
+Std Tail Mean: 0.051 
+
+Dataset: PTC_MR 
+Valid Mean: 0.595 
+Std Valid Mean: 0.0481 
+Test Mean: 0.455 
+Std Test Mean: 0.0505 
+Head Mean: 0.5901 
+Std Head Mean: 0.1511 
+Medium Mean: 0.5229 
+Std Medium Mean: 0.0521 
+Tail Mean: 0.4957 
+Std Tail Mean: 0.0474 
+
+Dataset: PROTEINS 
+Valid Mean: 0.695 
+Std Valid Mean: 0.0183 
+Test Mean: 0.6542 
+Std Test Mean: 0.0393 
+Head Mean: 0.7812 
+Std Head Mean: 0.0535 
+Medium Mean: 0.6741 
+Std Medium Mean: 0.0455 
+Tail Mean: 0.6678 
+Std Tail Mean: 0.0525 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6627 
+Std Valid Mean: 0.0253 
+Test Mean: 0.6455 
+Std Test Mean: 0.017 
+Head Mean: 0.6816 
+Std Head Mean: 0.0229 
+Medium Mean: 0.6604 
+Std Medium Mean: 0.0259 
+Tail Mean: 0.6161 
+Std Tail Mean: 0.031 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.606 
+Std Valid Mean: 0.0207 
+Test Mean: 0.604 
+Std Test Mean: 0.0258 
+Head Mean: 0.551 
+Std Head Mean: 0.0489 
+Medium Mean: 0.6271 
+Std Medium Mean: 0.0618 
+Tail Mean: 0.631 
+Std Tail Mean: 0.0279 
+
+Dataset: PTC_MR 
+Valid Mean: 0.585 
+Std Valid Mean: 0.0454 
+Test Mean: 0.4725 
+Std Test Mean: 0.0358 
+Head Mean: 0.6226 
+Std Head Mean: 0.0984 
+Medium Mean: 0.5257 
+Std Medium Mean: 0.1165 
+Tail Mean: 0.5152 
+Std Tail Mean: 0.1165 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6817 
+Std Valid Mean: 0.0181 
+Test Mean: 0.6533 
+Std Test Mean: 0.0372 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6663 
+Std Medium Mean: 0.049 
+Tail Mean: 0.671 
+Std Tail Mean: 0.0556 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.6 
+Std Valid Mean: 0.0187 
+Test Mean: 0.58 
+Std Test Mean: 0.0203 
+Head Mean: 0.5329 
+Std Head Mean: 0.0593 
+Medium Mean: 0.5815 
+Std Medium Mean: 0.0271 
+Tail Mean: 0.6317 
+Std Tail Mean: 0.0504 
+
+Dataset: PTC_MR 
+Valid Mean: 0.59 
+Std Valid Mean: 0.0454 
+Test Mean: 0.485 
+Std Test Mean: 0.0347 
+Head Mean: 0.6474 
+Std Head Mean: 0.1395 
+Medium Mean: 0.5714 
+Std Medium Mean: 0.1026 
+Tail Mean: 0.4941 
+Std Tail Mean: 0.1056 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6555 
+Std Valid Mean: 0.0215 
+Test Mean: 0.623 
+Std Test Mean: 0.0115 
+Head Mean: 0.6529 
+Std Head Mean: 0.0204 
+Medium Mean: 0.6308 
+Std Medium Mean: 0.0252 
+Tail Mean: 0.6076 
+Std Tail Mean: 0.0365 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6583 
+Std Valid Mean: 0.0257 
+Test Mean: 0.6342 
+Std Test Mean: 0.0297 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6518 
+Std Medium Mean: 0.0586 
+Tail Mean: 0.6234 
+Std Tail Mean: 0.0687 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.602 
+Std Valid Mean: 0.0164 
+Test Mean: 0.605 
+Std Test Mean: 0.0634 
+Head Mean: 0.5236 
+Std Head Mean: 0.0586 
+Medium Mean: 0.628 
+Std Medium Mean: 0.0832 
+Tail Mean: 0.6604 
+Std Tail Mean: 0.0826 
+
+Dataset: PTC_MR 
+Valid Mean: 0.585 
+Std Valid Mean: 0.0379 
+Test Mean: 0.48 
+Std Test Mean: 0.0381 
+Head Mean: 0.6026 
+Std Head Mean: 0.1178 
+Medium Mean: 0.5641 
+Std Medium Mean: 0.1344 
+Tail Mean: 0.5311 
+Std Tail Mean: 0.1265 
+
+Dataset: PROTEINS 
+Valid Mean: 0.655 
+Std Valid Mean: 0.0225 
+Test Mean: 0.6167 
+Std Test Mean: 0.0239 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6663 
+Std Medium Mean: 0.049 
+Tail Mean: 0.5491 
+Std Tail Mean: 0.0566 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.582 
+Std Valid Mean: 0.0268 
+Test Mean: 0.613 
+Std Test Mean: 0.0437 
+Head Mean: 0.5687 
+Std Head Mean: 0.0547 
+Medium Mean: 0.6076 
+Std Medium Mean: 0.0907 
+Tail Mean: 0.6825 
+Std Tail Mean: 0.0344 
+
+Dataset: PTC_MR 
+Valid Mean: 0.58 
+Std Valid Mean: 0.0647 
+Test Mean: 0.46 
+Std Test Mean: 0.0454 
+Head Mean: 0.6078 
+Std Head Mean: 0.1149 
+Medium Mean: 0.5815 
+Std Medium Mean: 0.131 
+Tail Mean: 0.4503 
+Std Tail Mean: 0.1144 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6577 
+Std Valid Mean: 0.0107 
+Test Mean: 0.6239 
+Std Test Mean: 0.018 
+Head Mean: 0.6506 
+Std Head Mean: 0.0216 
+Medium Mean: 0.6436 
+Std Medium Mean: 0.0266 
+Tail Mean: 0.5982 
+Std Tail Mean: 0.0485 
+
+Dataset: DD 
+Valid Mean: 0.7183 
+Std Valid Mean: 0.0253 
+Test Mean: 0.6708 
+Std Test Mean: 0.0695 
+Head Mean: 0.7886 
+Std Head Mean: 0.1063 
+Medium Mean: 0.6087 
+Std Medium Mean: 0.1219 
+Tail Mean: 0.6591 
+Std Tail Mean: 0.0847 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6367 
+Std Valid Mean: 0.038 
+Test Mean: 0.6192 
+Std Test Mean: 0.0229 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6323 
+Std Medium Mean: 0.0718 
+Tail Mean: 0.5941 
+Std Tail Mean: 0.0884 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.588 
+Std Valid Mean: 0.013 
+Test Mean: 0.577 
+Std Test Mean: 0.0261 
+Head Mean: 0.571 
+Std Head Mean: 0.0815 
+Medium Mean: 0.5255 
+Std Medium Mean: 0.0588 
+Tail Mean: 0.6659 
+Std Tail Mean: 0.0701 
+
+Dataset: PTC_MR 
+Valid Mean: 0.585 
+Std Valid Mean: 0.0137 
+Test Mean: 0.465 
+Std Test Mean: 0.0602 
+Head Mean: 0.6423 
+Std Head Mean: 0.1248 
+Medium Mean: 0.5292 
+Std Medium Mean: 0.1254 
+Tail Mean: 0.4777 
+Std Tail Mean: 0.0231 
+
+Dataset: PROTEINS 
+Valid Mean: 0.65 
+Std Valid Mean: 0.0312 
+Test Mean: 0.635 
+Std Test Mean: 0.0291 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.652 
+Std Medium Mean: 0.0799 
+Tail Mean: 0.6259 
+Std Tail Mean: 0.0754 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6464 
+Std Valid Mean: 0.0157 
+Test Mean: 0.6145 
+Std Test Mean: 0.02 
+Head Mean: 0.6466 
+Std Head Mean: 0.0304 
+Medium Mean: 0.6413 
+Std Medium Mean: 0.0252 
+Tail Mean: 0.576 
+Std Tail Mean: 0.014 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.584 
+Std Valid Mean: 0.027 
+Test Mean: 0.591 
+Std Test Mean: 0.0313 
+Head Mean: 0.548 
+Std Head Mean: 0.0869 
+Medium Mean: 0.5668 
+Std Medium Mean: 0.0508 
+Tail Mean: 0.6832 
+Std Tail Mean: 0.0291 
+
+Dataset: PTC_MR 
+Valid Mean: 0.57 
+Std Valid Mean: 0.0481 
+Test Mean: 0.425 
+Std Test Mean: 0.0718 
+Head Mean: 0.5393 
+Std Head Mean: 0.1866 
+Medium Mean: 0.5518 
+Std Medium Mean: 0.1532 
+Tail Mean: 0.4377 
+Std Tail Mean: 0.1142 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6033 
+Std Valid Mean: 0.0267 
+Test Mean: 0.6042 
+Std Test Mean: 0.0504 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6341 
+Std Medium Mean: 0.06 
+Tail Mean: 0.5495 
+Std Tail Mean: 0.1363 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.582 
+Std Valid Mean: 0.0268 
+Test Mean: 0.557 
+Std Test Mean: 0.0432 
+Head Mean: 0.5197 
+Std Head Mean: 0.0644 
+Medium Mean: 0.5507 
+Std Medium Mean: 0.0727 
+Tail Mean: 0.607 
+Std Tail Mean: 0.0305 
+
+Dataset: PTC_MR 
+Valid Mean: 0.595 
+Std Valid Mean: 0.0274 
+Test Mean: 0.45 
+Std Test Mean: 0.0755 
+Head Mean: 0.6234 
+Std Head Mean: 0.1322 
+Medium Mean: 0.5542 
+Std Medium Mean: 0.1528 
+Tail Mean: 0.4047 
+Std Tail Mean: 0.0975 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6577 
+Std Valid Mean: 0.014 
+Test Mean: 0.6284 
+Std Test Mean: 0.0135 
+Head Mean: 0.6578 
+Std Head Mean: 0.0142 
+Medium Mean: 0.6579 
+Std Medium Mean: 0.019 
+Tail Mean: 0.591 
+Std Tail Mean: 0.0374 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6217 
+Std Valid Mean: 0.038 
+Test Mean: 0.5858 
+Std Test Mean: 0.0231 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.5912 
+Std Medium Mean: 0.0858 
+Tail Mean: 0.5243 
+Std Tail Mean: 0.1464 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.598 
+Std Valid Mean: 0.0205 
+Test Mean: 0.594 
+Std Test Mean: 0.0566 
+Head Mean: 0.5528 
+Std Head Mean: 0.1005 
+Medium Mean: 0.599 
+Std Medium Mean: 0.073 
+Tail Mean: 0.6365 
+Std Tail Mean: 0.0568 
+
+Dataset: PTC_MR 
+Valid Mean: 0.58 
+Std Valid Mean: 0.0326 
+Test Mean: 0.4525 
+Std Test Mean: 0.0783 
+Head Mean: 0.6087 
+Std Head Mean: 0.1461 
+Medium Mean: 0.5606 
+Std Medium Mean: 0.1365 
+Tail Mean: 0.4243 
+Std Tail Mean: 0.0649 
+
+Dataset: PROTEINS 
+Valid Mean: 0.625 
+Std Valid Mean: 0.0604 
+Test Mean: 0.6025 
+Std Test Mean: 0.0627 
+Head Mean: 0.7867 
+Std Head Mean: 0.073 
+Medium Mean: 0.5576 
+Std Medium Mean: 0.1537 
+Tail Mean: 0.6245 
+Std Tail Mean: 0.1196 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.586 
+Std Valid Mean: 0.0305 
+Test Mean: 0.604 
+Std Test Mean: 0.0457 
+Head Mean: 0.5708 
+Std Head Mean: 0.0863 
+Medium Mean: 0.5935 
+Std Medium Mean: 0.0713 
+Tail Mean: 0.6651 
+Std Tail Mean: 0.0468 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6582 
+Std Valid Mean: 0.0214 
+Test Mean: 0.63 
+Std Test Mean: 0.024 
+Head Mean: 0.6592 
+Std Head Mean: 0.0327 
+Medium Mean: 0.6532 
+Std Medium Mean: 0.0268 
+Tail Mean: 0.5967 
+Std Tail Mean: 0.055 
+
+Dataset: PTC_MR 
+Valid Mean: 0.585 
+Std Valid Mean: 0.0285 
+Test Mean: 0.4475 
+Std Test Mean: 0.0541 
+Head Mean: 0.5795 
+Std Head Mean: 0.1278 
+Medium Mean: 0.5797 
+Std Medium Mean: 0.1189 
+Tail Mean: 0.4336 
+Std Tail Mean: 0.0334 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6133 
+Std Valid Mean: 0.0304 
+Test Mean: 0.5933 
+Std Test Mean: 0.0691 
+Head Mean: 0.778 
+Std Head Mean: 0.0489 
+Medium Mean: 0.5608 
+Std Medium Mean: 0.1672 
+Tail Mean: 0.602 
+Std Tail Mean: 0.1451 
+
+Dataset: DD 
+Valid Mean: 0.6567 
+Std Valid Mean: 0.0181 
+Test Mean: 0.6325 
+Std Test Mean: 0.0361 
+Head Mean: 0.8257 
+Std Head Mean: 0.0314 
+Medium Mean: 0.6332 
+Std Medium Mean: 0.0743 
+Tail Mean: 0.4731 
+Std Tail Mean: 0.1628 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.568 
+Std Valid Mean: 0.013 
+Test Mean: 0.558 
+Std Test Mean: 0.0395 
+Head Mean: 0.5817 
+Std Head Mean: 0.0616 
+Medium Mean: 0.5765 
+Std Medium Mean: 0.0704 
+Tail Mean: 0.4932 
+Std Tail Mean: 0.0459 
+
+Dataset: PTC_MR 
+Valid Mean: 0.585 
+Std Valid Mean: 0.0418 
+Test Mean: 0.42 
+Std Test Mean: 0.0784 
+Head Mean: 0.534 
+Std Head Mean: 0.1757 
+Medium Mean: 0.5071 
+Std Medium Mean: 0.1351 
+Tail Mean: 0.4593 
+Std Tail Mean: 0.0374 
+
+Dataset: PROTEINS 
+Valid Mean: 0.61 
+Std Valid Mean: 0.0518 
+Test Mean: 0.605 
+Std Test Mean: 0.0403 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6663 
+Std Medium Mean: 0.049 
+Tail Mean: 0.5055 
+Std Tail Mean: 0.1533 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6577 
+Std Valid Mean: 0.0099 
+Test Mean: 0.6291 
+Std Test Mean: 0.021 
+Head Mean: 0.6649 
+Std Head Mean: 0.0262 
+Medium Mean: 0.6472 
+Std Medium Mean: 0.0297 
+Tail Mean: 0.5962 
+Std Tail Mean: 0.028 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.58 
+Std Valid Mean: 0.01 
+Test Mean: 0.569 
+Std Test Mean: 0.0336 
+Head Mean: 0.5803 
+Std Head Mean: 0.0901 
+Medium Mean: 0.5804 
+Std Medium Mean: 0.0584 
+Tail Mean: 0.5425 
+Std Tail Mean: 0.0498 
+
+Dataset: PTC_MR 
+Valid Mean: 0.58 
+Std Valid Mean: 0.0209 
+Test Mean: 0.4525 
+Std Test Mean: 0.0742 
+Head Mean: 0.5733 
+Std Head Mean: 0.2086 
+Medium Mean: 0.575 
+Std Medium Mean: 0.0844 
+Tail Mean: 0.4748 
+Std Tail Mean: 0.1142 
+
+Dataset: PROTEINS 
+Valid Mean: 0.6117 
+Std Valid Mean: 0.0614 
+Test Mean: 0.5917 
+Std Test Mean: 0.0186 
+Head Mean: 0.7842 
+Std Head Mean: 0.0554 
+Medium Mean: 0.6663 
+Std Medium Mean: 0.049 
+Tail Mean: 0.4698 
+Std Tail Mean: 0.0652 
+
+Dataset: IMDB-BINARY 
+Valid Mean: 0.574 
+Std Valid Mean: 0.0089 
+Test Mean: 0.583 
+Std Test Mean: 0.0333 
+Head Mean: 0.6021 
+Std Head Mean: 0.0748 
+Medium Mean: 0.5343 
+Std Medium Mean: 0.09 
+Tail Mean: 0.6294 
+Std Tail Mean: 0.09 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6405 
+Std Valid Mean: 0.0521 
+Test Mean: 0.6193 
+Std Test Mean: 0.044 
+Head Mean: 0.6497 
+Std Head Mean: 0.025 
+Medium Mean: 0.6512 
+Std Medium Mean: 0.0451 
+Tail Mean: 0.5728 
+Std Tail Mean: 0.1007 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6605 
+Std Valid Mean: 0.0191 
+Test Mean: 0.6245 
+Std Test Mean: 0.0209 
+Head Mean: 0.6764 
+Std Head Mean: 0.0153 
+Medium Mean: 0.6444 
+Std Medium Mean: 0.0257 
+Tail Mean: 0.5674 
+Std Tail Mean: 0.0806 
+
+Dataset: FRANKENSTEIN 
+Valid Mean: 0.6482 
+Std Valid Mean: 0.0284 
+Test Mean: 0.6323 
+Std Test Mean: 0.0222 
+Head Mean: 0.6826 
+Std Head Mean: 0.0215 
+Medium Mean: 0.6384 
+Std Medium Mean: 0.0332 
+Tail Mean: 0.5969 
+Std Tail Mean: 0.0303 
 
